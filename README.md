@@ -26,7 +26,7 @@ Para o desenvolvimento utilizei as seguintes ferramentas:
 
 O projeto foi hospedado na Vercel para melhor visualização:
 
-[Desafio]()
+[Desafio](https://desafio-quikdev.vercel.app/)
 
 ## Instalação
 
@@ -34,7 +34,7 @@ Primeiro será necessário clonar essa aplicação com os seguintes comandos
 
 ```bash
 git clone git@github.com:leonardo534/desafio-quikdev.git
-cd quikdev
+cd desafio-quikdev
 ```
 
 Em seguida instale todas as dependências do projeto
