@@ -165,11 +165,19 @@ export default class FakerApi {
    */
   _allUsers()
   {
-      return JSON.parse(window.localStorage.getItem('users') ?? "") || []
+      const allUsers = window.localStorage.getItem('users');
+
+      if(!allUsers) return []
+
+      return JSON.parse(allUsers)
   }
   _getNextUserId()
   {
-      return parseInt(window.localStorage.getItem('nextUserId') ?? "") || 1
+      const nextUserId = window.localStorage.getItem('nextUserId');
+
+      if(!nextUserId) return 1
+
+      return Number(nextUserId)
   }
   _addNextUserId()
   {
@@ -203,7 +211,12 @@ export default class FakerApi {
   }
   _getAuth()
   {
-      return JSON.parse(window.localStorage.getItem('auth') ?? "")
+
+    const getAuth = window.localStorage.getItem('auth');
+
+      if(!getAuth) return null
+
+      return JSON.parse(getAuth)
 
   }
   _isAuthenticate()
@@ -241,11 +254,17 @@ export default class FakerApi {
    */
   _allPosts()
   {
-      return JSON.parse(window.localStorage.getItem('posts') ?? "") || []
+      const posts = window.localStorage.getItem('posts');
+
+      if(!posts) return []
+      return JSON.parse(posts)
   }
   _getNextPostId()
   {
-      return parseInt(window.localStorage.getItem('nextPostId') ?? "") || 1
+      const postId = window.localStorage.getItem('nextPostId');
+
+      if(!postId) return 1
+      return Number(postId) 
   }
   _addNextPostId()
   {
@@ -303,7 +322,11 @@ export default class FakerApi {
   }
   _getNextCommentId()
   {
-      return parseInt(window.localStorage.getItem('nextCommentId') ?? "") || 1
+      const nextCommentId = window.localStorage.getItem('nextCommentId');
+      
+      if(!nextCommentId) return 1;
+
+      return Number(nextCommentId);
   }
   _addNextCommentId()
   {
