@@ -1,4 +1,4 @@
-# Desafio SM Places
+# Desafio QuikDev
 ![React JS](https://img.shields.io/badge/reactjs-black?style=for-the-badge&logo=react&logoColor=blue)
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![Material UI](https://img.shields.io/badge/material_ui-DB7093?style=for-the-badge&logo=mui&logoColor=white)
