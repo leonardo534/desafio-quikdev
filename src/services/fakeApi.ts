@@ -165,7 +165,7 @@ export default class FakerApi {
    */
   _allUsers()
   {
-      return JSON.parse(window.localStorage.getItem('users') ?? "{}") || []
+      return JSON.parse(window.localStorage.getItem('users') ?? []) || []
   }
   _getNextUserId()
   {
