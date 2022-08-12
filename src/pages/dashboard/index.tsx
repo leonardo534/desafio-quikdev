@@ -195,7 +195,8 @@ export default function Dashboard() {
                   display: "flex",
                   flexDirection: "column",
                   gap: "10px",
-                  width: "100%"
+                  width: "100%",
+                  position: "relative"
                 }}>
                 <Typography
                   sx={{
@@ -205,7 +206,7 @@ export default function Dashboard() {
                     textTransform: "uppercase",
                     color: "#444444",
                   }}>{post.title}</Typography>
-                <Avatar>
+                <Avatar sx={{position: "absolute", right: "0", width: "30px", height: "30px"}}>
                   <MoreVertIcon sx={{ marginBottom: '0px' }} id="basic-button"
                     aria-controls={open ? 'basic-menu' : undefined}
                     aria-haspopup="true"
@@ -262,7 +263,13 @@ export default function Dashboard() {
                     />
                   </ListItem>
                 </List>
-                <TextField onChange={(e) => handleSetComments(e.target.value)} id="filled-basic" label="Deixe um comentário" variant="outlined" multiline maxRows={3} fullWidth />
+                <Box
+                sx={{
+                  position: "relative"
+                }}>
+                <TextField onChange={(e) => handleSetComments(e.target.value)} id="filled-basic" label="Deixe um comentário" variant="outlined" multiline maxRows={3} sx={{
+                  width: "87%"
+                }} />
                 <Tooltip title="Adicionar comentário">
                   <Fab
                     sx=
@@ -272,12 +279,15 @@ export default function Dashboard() {
                       boxShadow: "0px 5px 20px #8893aa",
                       transition: "all 0.3s ease",
                       zIndex: 1,
+                      position: "absolute",
+                      right: "0"
                     }}
                     onClick={() => handleSaveComment(post.id)}
                     color="secondary" aria-label="add">
                     <AddIcon />
                   </Fab>
                 </Tooltip>
+                </Box>
               </Box>
             </Box>
           ))}
