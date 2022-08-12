@@ -165,11 +165,11 @@ export default class FakerApi {
    */
   _allUsers()
   {
-      return JSON.parse(window.localStorage.getItem('users')) || []
+      return JSON.parse(window.localStorage.getItem('users') ?? "") || []
   }
   _getNextUserId()
   {
-      return parseInt(window.localStorage.getItem('nextUserId')) || 1
+      return parseInt(window.localStorage.getItem('nextUserId') ?? "") || 1
   }
   _addNextUserId()
   {
@@ -203,7 +203,7 @@ export default class FakerApi {
   }
   _getAuth()
   {
-      return JSON.parse(window.localStorage.getItem('auth'))
+      return JSON.parse(window.localStorage.getItem('auth') ?? "")
 
   }
   _isAuthenticate()
@@ -241,11 +241,11 @@ export default class FakerApi {
    */
   _allPosts()
   {
-      return JSON.parse(window.localStorage.getItem('posts')) || []
+      return JSON.parse(window.localStorage.getItem('posts') ?? "") || []
   }
   _getNextPostId()
   {
-      return parseInt(window.localStorage.getItem('nextPostId')) || 1
+      return parseInt(window.localStorage.getItem('nextPostId') ?? "") || 1
   }
   _addNextPostId()
   {
@@ -303,7 +303,7 @@ export default class FakerApi {
   }
   _getNextCommentId()
   {
-      return parseInt(window.localStorage.getItem('nextCommentId')) || 1
+      return parseInt(window.localStorage.getItem('nextCommentId') ?? "") || 1
   }
   _addNextCommentId()
   {
