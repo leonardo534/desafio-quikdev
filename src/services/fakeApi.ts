@@ -303,7 +303,7 @@ export default class FakerApi {
   }
   _getNextCommentId()
   {
-      return parseInt(window.localStorage.getItem('nextCommentId') ?? "") || 1
+      return parseInt(window.localStorage.getItem('nextCommentId') ?? "{}") || 1
   }
   _addNextCommentId()
   {
